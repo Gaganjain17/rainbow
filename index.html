@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Food Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-wrap">
+            <div class="brand">
+                <img src="logo-final.png" alt="Rainbow Food Products" class="brand-logo">
+                <div class="brand-title">Rainbow Food Products</div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">Menu</button>
+            <nav class="nav" id="siteNav">
+                <ul class="nav-list">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="Manufacturing.html">Manufacturing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <h1>Taste and Flavors of Nashik</h1>
+                    <p class="muted">Discover our wide range of premium, hygienically processed food products crafted with care.</p>
+                    <a href="Manufacturing.html" class="cta">See our Manufacturing</a>
+                </div>
+                <div class="card">
+                    <h3>Why Rainbow?</h3>
+                    <p>We follow stringent quality standards and modern processes to deliver safe and delicious products.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="grid">
+                    <article class="card">
+                        <img class="product-image" src="Saltedchips.jpeg" alt="Classic Salted Potato Chips" loading="lazy">
+                        <h3>Classic Salted Chips</h3>
+                        <p class="muted">Crispy, lightly salted potato chips.</p>
+                    </article>
+                    <article class="card">
+                        <img class="product-image" src="TomatoChips.jpeg" alt="Tangy Tomato Potato Chips" loading="lazy">
+                        <h3>Tangy Tomato Chips</h3>
+                        <p class="muted">Zesty tomato flavor with a perfect crunch.</p>
+                    </article>
+                    <article class="card">
+                        <img class="product-image" src="Sevmurmura.jpeg" alt="Premium Sev Murmura" loading="lazy">
+                        <h3>Premium Sev Murmura</h3>
+                        <p class="muted">Light, crunchy, and flavorful murmura mix.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <p class="muted">Rainbow Food Products is dedicated to bringing safe, tasty, and innovative foods to your table.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p>Email: rainbowfoodproducts24@gmail.com</p>
+                <p>Phone: +91 9307312889</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <small>&copy; <span id="year"></span> Rainbow Food Products. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('siteNav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('is-open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+

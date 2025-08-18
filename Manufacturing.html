@@ -3,60 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainbow Food Products</title>
+    <title>Manufacturing • Rainbow Food Products</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="container header-wrap">
+            <div class="brand">
+                <img src="logo-final.png" alt="Rainbow Food Products" class="brand-logo">
+                <div class="brand-title">Rainbow Food Products</div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">Menu</button>
+            <nav class="nav" id="siteNav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a class="active" href="Manufacturing.html">Manufacturing</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- Header -->
-<header class="header">
-    <div class="container header-content">
-        <img src="logo-final.png" alt="Rainbow Food Products Logo" class="brand-logo">
-        <h1>Rainbow Food Products</h1>
-    </div>
-</header>
-
-<!-- Manufacturing Units -->
-<section class="section">
-    <div class="container">
-        <h2 class="section-title">Our Manufacturing Units</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>A) Unispec Foods Pvt. Ltd</h3>
-                <div class="license">
-                    <img src="FSSAI_logo.png" alt="FSSAI Logo" class="fssai-logo">
-                    <p>Lic. No. <strong>11522999000296</strong></p>
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Our Manufacturing Units</h1>
+                <div class="grid">
+                    <article class="card">
+                        <h3>A) Unispec Foods Pvt. Ltd</h3>
+                        <p class="muted">Lic. No. <strong>11522999000296</strong></p>
+                        <p>Gat No-352, Indore Rasegaon Road, Talegaon, Dindori, Nashik, Maharashtra 422202</p>
+                    </article>
                 </div>
-                <p>Gat No- 352, Indore Rasegaon Road, Talegaon, Dindori, Nashik, Maharashtra 422202</p>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-
-
-<!-- Office Address -->
-<section class="section">
-    <div class="container">
-        <h2 class="section-title">Offices</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Head Office</h3>
-                <p>Rainbow Food Products<br>
-                Narhari Nagar, Pathardi Phata, Dist. Nashik Maharashtra - 422010<br>
-                Email: <a href="rainbowfoodproducts24@gmail.com">rainbowfoodproducts24@gmail.com</a><br>
-                Phone: +91 9307312889</p>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Offices</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Head Office</h3>
+                        <p>Rainbow Food Products</p>
+                        <p>Narhari Nagar, Pathardi Phata, Dist. Nashik Maharashtra - 422010</p>
+                        <p>Email: <a href="mailto:rainbowfoodproducts24@gmail.com">rainbowfoodproducts24@gmail.com</a></p>
+                        <p>Phone: +91 9307312889</p>
+                    </article>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <small>&copy; <span id="year"></span> Rainbow Food Products. All rights reserved.</small>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2025 Rainbow Food Products. All Rights Reserved.</p>
-    </div>
-</footer>
-
+    <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('siteNav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('is-open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
+
+
